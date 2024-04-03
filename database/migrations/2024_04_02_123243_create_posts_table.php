@@ -10,9 +10,9 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id');
+            $table->bigInteger('user_id')->index();
             $table->foreign('user_id') -> references('id')->on('users') -> onDelete('cascade');
-            $table->bigInteger('category_id');
+            $table->bigInteger('category_id')->index();
             $table->foreign('category_id') -> references('id')->on('categories') -> onDelete('cascade');
             $table->string('title');
             $table->text('content');

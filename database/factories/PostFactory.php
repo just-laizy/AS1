@@ -29,7 +29,6 @@ class PostFactory extends Factory
             'content' => $category->name,
             'view_count' => fake()->numberBetween(100, 500) * 1000,
             'like_count' => fake()->numberBetween(100, 500) * 100,
-            'published_at' => Carbon::parse($createdAt),
             'created_at' => Carbon::parse($createdAt),
             'updated_at' => Carbon::parse($createdAt)->addDays(rand(0, 6))->addHours(rand(0, 23))->addMinutes(rand(0, 59)),
         ];

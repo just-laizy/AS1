@@ -18,7 +18,7 @@ class CategorySeeder extends Seeder
             'Sports'
         ];
         foreach ($objs as $obj) {
-            Category::create([
+            category::create([
                 'name' => $obj
             ]);
         }

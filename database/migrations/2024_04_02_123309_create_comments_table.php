@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id');
+            $table->bigInteger('user_id')->index();
             $table->foreign('user_id') -> references('id')->on('users') -> onDelete('cascade');
-            $table->bigInteger('post_id');
+            $table->bigInteger('post_id')->index();
             $table->foreign('post_id') -> references('id')->on('posts') -> onDelete('cascade');
             $table->string('content');
             $table->integer('like_count');
